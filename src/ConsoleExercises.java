@@ -21,3 +21,5 @@ public class ConsoleExercises {
         System.out.printf("A room with a length of %f and width of %f results in an area of %f and perimeter of %f", length, width, length * width, length * 2.0D + width * 2.0D);
     };
 }
+
+//
