@@ -1,25 +1,34 @@
+package src;
 import java.util.Scanner;
 
 public class ConsoleExercises {
-    public static void main (String[] args) {
-        double pi = 3.14159;
-        //Need to be explain below
-        System.out.format("The value of pi is approximately %.2f%n", pi);
-        Scanner scan = new Scanner(System.in);
-        //Need to be explain below
-        scan.useDelimiter("\n");
-        System.out.println("Gimme 3 words");
-        String one = scan.next();
-        String two = scan.next();
-        String three = scan.next();
-        //Need to be explain the % with char
-        System.out.printf("You said:%n %s%n %s%n %s%n", one, two, three);
-        System.out.println("Hey what's the length of your room?");
-        double length = Double.parseDouble(scan.next());
-        System.out.println("Hey what's the width of your room?");
-        double width = Double.parseDouble(scan.next());
-        System.out.printf("A room with a length of %f and width of %f results in an area of %f and perimeter of %f", length, width, length * width, length * 2.0D + width * 2.0D);
-    };
-}
 
-//
+    // Main Method
+    public static void main(String[] args) {
+        //
+        Scanner scanner = new Scanner(System.in);
+        // How to use format??
+        double pi = 3.14159;
+        System.out.format("The value of pi is approximately " + pi + ". %n%n", "", "");
+        //
+        System.out.println("Please enter a number");
+        int userNum = scanner.nextInt();
+        System.out.println("You entered " + userNum + ".");
+        //
+        System.out.println("Please type out three words.");
+        String one = scanner.next();
+        String two = scanner.next();
+        String three = scanner.next();
+        System.out.printf("You entered:%n %s %s %s %n %n", one, two, three);
+        // why does it skip it?
+        System.out.println("Please enter a sentence.");
+        String test1 = scanner.nextLine();
+        System.out.println(test1);
+          //
+        System.out.println("What is the length of the classroom?");
+        int classLength = Integer.parseInt(scanner.nextLine());
+        System.out.println("What is the width of the classroom?");
+        int classWidth = Integer.parseInt(scanner.nextLine());
+        System.out.printf("Your length was %d and your width was %d. When you combine them together you will get the area of %d and a perimeter of %d", classLength, classWidth, classLength * classWidth, (classLength * 2) + (classWidth *2));
+    };
+};
