@@ -59,17 +59,17 @@ public class Input {
 
         // Method of getInteger
 
-        public int getInteger(int min, int max) {
-            int input;
-            do {
-                System.out.println("Enter a number between " + min + " and " + max + ".");
-                input = this.scanner.nextInt();
-                if (input < min || input > max) {
-                    System.out.println("Input invalid");
-                }
-            } while (input < min || input > max);
-            System.out.println("Input acceptable");
-            return input;
+//        public int getInteger(int min, int max) {
+//            int input;
+//            do {
+//                System.out.println("Enter a number between " + min + " and " + max + ".");
+//                input = this.scanner.nextInt();
+//                if (input < min || input > max) {
+//                    System.out.println("Input invalid");
+//                }
+//            } while (input < min || input > max);
+//            System.out.println("Input acceptable");
+//            return input;
         }
 
         // Method of getInt
@@ -119,4 +119,3 @@ public class Input {
         }
 
     }
-}
