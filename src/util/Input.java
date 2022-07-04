@@ -79,7 +79,7 @@ public class Input {
             while (true) {
                 try {
                     int userInput = Integer.valueOf(this.scanner.nextLine());
-                    System.out.println("Input acceptable");
+                    System.out.printf("Input acceptable");
                     return userInput;
                 } catch (NumberFormatException e) {
                     System.out.println("Invalid. Input not an integer. Try again.");
