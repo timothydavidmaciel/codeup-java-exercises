@@ -17,6 +17,7 @@ public class ArraysExercises {
 
         for (Person humanName : humans) {
             System.out.println(humanName.getName());
+
             System.out.println("Adding new human......");
             Person Joey = new Person("Joey");
             humans = addPerson(humans, Joey);
