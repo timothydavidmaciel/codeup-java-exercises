@@ -7,11 +7,12 @@ public class Square extends Rectangle {
 
     @Override
     public int getArea() {
-        return side * side;
+        return length * length;
     }
 
     @Override
     public int getPerimeter() {
-        return 4 * side;
+        return 4 * length;
     }
+
 }
