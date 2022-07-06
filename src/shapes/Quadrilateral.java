@@ -1,5 +1,5 @@
 package shapes;
 
-class shape extends quadrilateral {
-
-}
+//class shape extends quadrilateral {
+//
+//}
