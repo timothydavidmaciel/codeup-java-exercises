@@ -74,18 +74,15 @@ public class Input {
 
         // Method of getInt
 
-        public int getInt() {
-            System.out.println("Input number...");
-            while (true) {
-                try {
-                    int userInput = Integer.valueOf(this.scanner.nextLine());
-                    System.out.printf("Input acceptable");
-                    return userInput;
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid. Input not an integer. Try again.");
-                }
-            }
+    public int getInt() {
+        String userInput = getString("Enter an integer...");
+        try {
+            return Integer.parseInt(userInput);
+        } catch (NumberFormatException nfe) {
+            nfe.printStackTrace();
+            return getInt();
         }
+    }
 
         // Method of getDouble with 2
 
@@ -105,17 +102,14 @@ public class Input {
 
         // Method of getDouble
 
-        public double getDouble() {
-            System.out.println("Input number...");
-            while (true) {
-                try {
-                    double userInput = Double.valueOf(getString());
-                    System.out.println("Input acceptable");
-                    return userInput;
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid. Input not an double. Try again.");
-                }
-            }
+    public double getDouble() {
+        try {
+            double userInput = Double.parseDouble(getString("Input number..."));
+            System.out.println("Input acceptable");
+            return userInput;
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid. Input not an double. Try again.");
+            return getDouble();
         }
 
     }
