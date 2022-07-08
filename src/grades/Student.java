@@ -29,6 +29,10 @@ public class Student {
         return grades;
     }
 
+    public String toString() {
+        return "name: " + name + "\ngrades:" + grades;
+    }
+
     // returns the average of the students grades
     public double getGradeAverage() {
         double sum = 0.0;
